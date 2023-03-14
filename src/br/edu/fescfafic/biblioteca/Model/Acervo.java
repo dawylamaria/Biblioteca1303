@@ -9,14 +9,16 @@ Listas
 */
     public String genero;
 
-    public String codigoIdentificador;
+    public String codigoID;
 
-    public String nomeDoAutor;
+    public String nomeAutor;
 
     public String ano;
 
     public boolean disponivel;
 
-
-
+    public ArrayList<String> listaAcervoDigital = new ArrayList<>();
+    public ArrayList<String> listaAcervoFisico = new ArrayList<>();
+    public ArrayList<String> listaAcervoPermanente = new ArrayList<>();
+    
 }
