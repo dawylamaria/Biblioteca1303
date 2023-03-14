@@ -8,13 +8,9 @@ Listas
 - Fisico(livros, revistas)
 */
     public String genero;
-
     public String codigoID;
-
     public String nomeAutor;
-
     public String ano;
-
     public boolean disponivel;
 
     public ArrayList<String> listaAcervoDigital = new ArrayList<>();
