@@ -1,9 +1,9 @@
 package br.edu.fescfafic.biblioteca.Model;
-
 import java.util.ArrayList;
 
 //Quando emprestar, acrescentar na lista historicoDeEmprestimo e obrasEmPosse
 //Quando devolver, remover da lista obrasEmPosse
+
 public class Emprestimo {
 
     public String dataSaida;
@@ -20,13 +20,15 @@ public class Emprestimo {
 
     public void adicionarEmprestimo(Impressos impressos) {
         this.historicoDeEmprestimos.add(impressos);
+        this.obrasEmPosse.add(impressos); 
     }
 
     public void adicionarObra(Impressos impressos) {
         this.obrasEmPosse.add(impressos);
     }
 
+    public void devolucao(){
 
+    }
 
-//metodo de devolução
 }
