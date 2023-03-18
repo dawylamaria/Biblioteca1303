@@ -70,19 +70,19 @@ public class MainProjeto {
                 false,
                 true
         );
-        
+
         Atendente atendente1 = new Atendente(
                 "Aryelle",
                 "098.678.543-84",
                 "03.106.103-6"
         );
-        
+
         Atendente atendente2 = new Atendente(
                 "Luís",
                 "252.890.432-78",
                 "54.098.333.4"
         );
-        
+
         Bibliotecario bibliotecario1 = new Bibliotecario(
                 "Dawyla",
                 "890.543.342-21",
@@ -96,7 +96,7 @@ public class MainProjeto {
                 "90.098.543-6",
                 "11030201"
         );
-        
+
         Leitor leitor1 = new Leitor(
                 "Diego",
                 24,
@@ -105,7 +105,7 @@ public class MainProjeto {
                 true,
                 00.0
         );
-        
+
         Leitor leitor2 = new Leitor(
                 "Dawyla",
                 18,
@@ -132,6 +132,35 @@ public class MainProjeto {
                 true,
                 00.0
         );
+
+        bibliotecario1.getCrb();
+        bibliotecario1.setCrb("0002030d");
+        bibliotecario1.getCrb();
+
+        leitor1.cadastrarLeitores(leitor1);
+        leitor2.cadastrarLeitores(leitor2);
+        leitor3.cadastrarLeitores(leitor3);
+        leitor4.cadastrarLeitores(leitor4);
+
+        leitor1.setCadastroLiberado(false);
+        leitor1.getCadastroLiberado();
+
+        quadroPintado.getDisponivel();
+        quadroPintado.setDisponivel(true);
+        quadroPintado.getExposto();
+        quadroPintado.setExposto(false);
+
+        atendente1.getNome();
+        atendente1.setNome("Maradja");
+        atendente1.getNome();
+
+        impresso1.adicionarAcervoDigital(impresso1);
+        impresso2.adicionarAcervoDigital(impresso2);
+        impresso3.adicionarAcervoFisico(impresso3);
+        impresso4.adicionarAcervoFisico(impresso4);
+        quadroPintado.adicionarAcervoPermanente(quadroPintado);
+        escultura.adicionarAcervoPermanente(escultura);
+
 
     }
 
