@@ -13,8 +13,16 @@ public class ObrasVisuais extends Acervo {
         this.disponivel = status;
     }
 
+    public void getDisponivel(){
+        System.out.println(this.disponivel);
+    }
+
     public void setExposto(boolean status){
         this.exposto = status;
+    }
+
+    public void getExposto(){
+        System.out.println(this.exposto);
     }
 
 }
