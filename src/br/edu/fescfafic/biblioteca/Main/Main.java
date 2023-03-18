@@ -10,8 +10,8 @@ public class MainProjeto {
                 "001",
                 "Diego Gadelha",
                 "2018",
-               true,
-               "3º",
+                true,
+                "3º",
                 "Romance",
                 "Aventuras de Diego",
                 "357"
