@@ -8,17 +8,29 @@ abstract class Acervo {
     public String autor;
     public String ano;
     public boolean disponivel;
-    
-    public ArrayList<String> listaAcervoDigital = new ArrayList<>();
-    public ArrayList<String> listaAcervoFisico = new ArrayList<>();
-    public ArrayList<String> listaAcervoPermanente = new ArrayList<>();
 
-    Acervo(String tipo, String codigoIdentificador, String autor, String ano, boolean disponivel){
+    public ArrayList<Acervo> listaAcervoDigital = new ArrayList<>();
+    public ArrayList<Acervo> listaAcervoFisico = new ArrayList<>();
+    public ArrayList<Acervo> listaAcervoPermanente = new ArrayList<>();
+
+    public Acervo(String tipo, String codigoIdentificador, String autor, String ano, boolean disponivel){
         this.tipo = tipo;
         this.codigoIdentificador = codigoIdentificador;
         this.autor = autor;
         this.ano = ano;
         this.disponivel = disponivel;
+    }
+    
+    public void adicionarAcervoDigital(Acervo acervo){
+        this.listaAcervoDigital.add(acervo);
+    }
+
+    public void adicionarAcervoFisico(Acervo acervo){
+        this.listaAcervoFisico.add(acervo);
+    }
+
+    public void adicionarAcervoPermanente(Acervo acervo){
+        this.listaAcervoPermanente.add(acervo);
     }
 
 }
