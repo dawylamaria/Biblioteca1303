@@ -8,36 +8,40 @@ public class Emprestimo {
     public LocalDate dataSaida;
     public LocalDate dataEntrada;
     final double VALOR_MULTA = 0.50;
-    public Leitor nomeDoLeitor;
-    public ArrayList<Impressos> historicoDeEmprestimos = new ArrayList<>();
-    public ArrayList<Impressos> obrasEmPosse = new ArrayList<>();
+    public Leitor nome;
+    public ArrayList<Impresso> obrasEmPosse = new ArrayList<>();
 
     public Emprestimo(LocalDate dataSaida, LocalDate dataEntrada, Leitor nome) {
         this.dataSaida = dataSaida;
         this.dataEntrada = dataEntrada;
-        this.nomeDoLeitor = nome;
+        this.nome = nome;
     }
 
-    public void adicionarEmprestimo(Impressos impressos) {
-        this.historicoDeEmprestimos.add(impressos);
-        this.obrasEmPosse.add(impressos);
+    public void adicionarObra(Impresso impresso) {
+        this.obrasEmPosse.add(impresso);
     }
 
-    public void adicionarObra(Impressos impressos) {
-        this.obrasEmPosse.add(impressos);
+    private void removerObra(Impresso impresso) {
+        this.obrasEmPosse.remove(impresso);
     }
 
 
-    public double devolucao(LocalDate dataEntrada, LocalDate dataSaida) {
-        double multa;
-        long diasEmprestados = ChronoUnit.DAYS.between(dataEntrada, dataSaida);
+    public double devolucao(Impresso impresso) {
+
+        double multa = 0;
+
+        long diasEmprestados = ChronoUnit.DAYS.between(this.dataSaida, this.dataEntrada);
+
         if (diasEmprestados > 7) {
-            int diasExcedidos = (int) (diasEmprestados - 7);
-            multa = diasExcedidos * VALOR_MULTA;
-        } else {
-            multa = 0;
+            multa = diasEmprestados * this.VALOR_MULTA;
         }
+
+        this.removerObra(impresso);
+
         return multa;
     }
 
 }
+
+// LocalDate hoje = LocalDate.now(); para pegar a data de hoje baseado na data do computador
+// LocalDate data = LocalDate.of(2023, 3, 18);
