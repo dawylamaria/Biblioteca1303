@@ -161,7 +161,6 @@ public class MainProjeto {
         quadroPintado.adicionarAcervoPermanente(quadroPintado);
         escultura.adicionarAcervoPermanente(escultura);
 
-
     }
 
 }
