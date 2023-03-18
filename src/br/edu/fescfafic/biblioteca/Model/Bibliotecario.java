@@ -1,27 +1,27 @@
-package br.edu.fescfafic.biblioteca.Model;
+package br.edu.fescfafic.biblioteca.Model;a
 
 public class Bibliotecario extends Pessoa {
-    public String CRB;
+    public String crb;
 
-    public Bibliotecario(String cpf, String rg, String nome, String CRB){
-        super(cpf, rg, nome);
-        this.CRB = CRB;
+    public Bibliotecario(String nome, String _cpf, String _rg, String crb){
+        super(nome, _cpf, _rg);
+        this.crb = crb;
     }
-
-    public String getCRB() {
-        return CRB;
+    public void getCrb(){
+        System.out.println(this.crb);
     }
-
-    public void setCRB(String CRB) {
-        this.CRB = CRB;
+    public void setCrb(String crb){
+        this.crb = crb;
     }
 
     @Override
-    public String toString() {
-        return "Bibliotecário{" +
-                "CRB='" + CRB + '\'' +
-                ", _cpf='" + _cpf + '\'' +
-                ", nome='" + nome + '\'' +
+    public String toString(){
+        return "Bibliotecarios{" +
+                "nome='" + nome + '\'' +
+                ",cpf='" + _cpf + '\'' +
+                ",rg='" + _rg + '\'' +
+                ",crb='" + crb + '\''+
                 '}';
     }
+
 }
