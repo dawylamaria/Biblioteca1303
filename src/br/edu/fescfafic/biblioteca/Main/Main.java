@@ -3,7 +3,7 @@ import br.edu.fescfafic.biblioteca.Model.*;
 
 import java.time.LocalDate;
 
-public class MainProjeto {
+class MainProjeto {
 
     public static void main(String[] args) {
 

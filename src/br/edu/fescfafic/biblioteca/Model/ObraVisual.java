@@ -1,10 +1,10 @@
 package br.edu.fescfafic.biblioteca.Model;
 
-public class ObrasVisuais extends Acervo {
+public class ObraVisual extends Acervo {
     public boolean exposto;
 
 
-    public ObrasVisuais(String tipo, String codigoIdentificador, String autor, String ano, boolean disponivel, boolean exposto){
+    public ObraVisual(String tipo, String codigoIdentificador, String autor, String ano, boolean disponivel, boolean exposto){
         super(tipo, codigoIdentificador, autor, ano, disponivel);
         this.exposto = exposto;
     }

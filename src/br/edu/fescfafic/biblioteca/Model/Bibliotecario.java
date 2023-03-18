@@ -1,4 +1,4 @@
-package br.edu.fescfafic.biblioteca.Model;a
+package br.edu.fescfafic.biblioteca.Model;
 
 public class Bibliotecario extends Pessoa {
     public String crb;

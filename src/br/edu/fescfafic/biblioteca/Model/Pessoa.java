@@ -3,7 +3,7 @@ package br.edu.fescfafic.biblioteca.Model;
 abstract class Pessoa {
 
     protected String _cpf;
-    private String _rg;
+    protected String _rg;
     public String nome;
 
     Pessoa(String cpf, String rg, String nome){
