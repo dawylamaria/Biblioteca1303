@@ -1,27 +1,21 @@
 package br.edu.fescfafic.biblioteca.Model;
-
 import java.util.ArrayList;
 
-public class Leitor {
-    public String nome;
+public class Leitor extends Pessoa{
     public int idade;
-
-    protected String _cpf;
-    private String _rg;
-    public int debito;
-//Se tiver debito o cadastro não será liberado, false
+    public double debito;
     public boolean cadastroLiberado;
 
-    public Leitor(String nome, int idade, String cpf, String rg, boolean cadastroLiberado, int debito){
-        this._cpf = cpf;
-        this._rg = rg;
+    public Leitor(String nome, int idade, String _cpf, String _rg, boolean cadastroLiberado, double debito){
+        super(nome, _cpf, _rg);
         this.idade = idade;
-        this.nome = nome;
         this.cadastroLiberado = cadastroLiberado;
         this.debito = debito;
+
     }
 
     public void setCadastroLiberado(boolean status) {
         this.cadastroLiberado = status;
     }
+
 }
