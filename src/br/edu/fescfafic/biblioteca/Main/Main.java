@@ -1,11 +1,13 @@
 package br.edu.fescfafic.biblioteca.Main;
 import br.edu.fescfafic.biblioteca.Model.*;
 
+import java.time.LocalDate;
+
 public class MainProjeto {
 
     public static void main(String[] args) {
 
-        Impressos impresso1 = new Impressos(
+        Impresso impresso1 = new Impresso(
                 "Livro",
                 "001",
                 "Diego Gadelha",
@@ -17,7 +19,7 @@ public class MainProjeto {
                 "357"
         );
 
-        Impressos impresso2 = new Impressos(
+        Impresso impresso2 = new Impresso(
                 "Livro",
                 "002",
                 "Dawyla Maria",
@@ -29,7 +31,7 @@ public class MainProjeto {
                 "360"
         );
 
-        Impressos impresso3 = new Impressos(
+        Impresso impresso3 = new Impresso(
                 "Revista",
                 "003",
                 "Aryelle",
@@ -41,7 +43,7 @@ public class MainProjeto {
                 "30"
         );
 
-        Impressos impresso4 = new Impressos(
+        Impresso impresso4 = new Impresso(
                 "Livro",
                 "004",
                 "Luís",
@@ -53,7 +55,7 @@ public class MainProjeto {
                 "177"
         );
 
-        ObrasVisuais quadroPintado = new ObrasVisuais(
+        ObraVisual quadroPintado = new ObraVisual(
                 "Quadro",
                 "005",
                 "Aryelle",
@@ -62,7 +64,7 @@ public class MainProjeto {
                 true
         );
 
-        ObrasVisuais escultura = new ObrasVisuais(
+        ObraVisual escultura = new ObraVisual(
                 "Escultura",
                 "006",
                 "Diego Aleijadinho",
@@ -160,6 +162,21 @@ public class MainProjeto {
         impresso4.adicionarAcervoFisico(impresso4);
         quadroPintado.adicionarAcervoPermanente(quadroPintado);
         escultura.adicionarAcervoPermanente(escultura);
+
+        Emprestimo emprestimo = new Emprestimo(
+                LocalDate.of(2023, 3, 9),
+                LocalDate.of(2023, 3, 18),
+                leitor1
+                );
+
+        emprestimo.adicionarObra(impresso4);
+        double multa = emprestimo.devolucao(impresso4);
+
+        System.out.println(multa);
+
+        if (multa > 0){
+            System.out.printf("Voce precisa pagar: %.2f reais", multa);
+        }
 
     }
 
