@@ -5,7 +5,7 @@ import java.time.LocalDate;
 
 class MainProjeto {
 
-    public static void main(String[] args) {
+public static void main(String[] args) {
 
         Impresso impresso1 = new Impresso(
                 "Livro",
@@ -105,7 +105,7 @@ class MainProjeto {
                 "790.543.342-21",
                 "90.098.543-5",
                 true,
-                00.0
+                00
         );
 
         Leitor leitor2 = new Leitor(
@@ -114,7 +114,7 @@ class MainProjeto {
                 "890.543.342-22",
                 "56.098.543-6",
                 true,
-                00.0
+                00
         );
 
         Leitor leitor3 = new Leitor(
@@ -132,7 +132,7 @@ class MainProjeto {
                 "252.890.432-79",
                 "54.098.333.5",
                 true,
-                00.0
+                00
         );
 
         bibliotecario1.getCrb();
